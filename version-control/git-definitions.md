@@ -12,7 +12,7 @@
 
 * What is a commit? What makes a good commit message?
 
-  A commit is the final step in the process to finalizing a change in a repository. When you commit a change it becomes a permanent (unless you decide to commit another change in the future that changes it) update in the repository. A good commit message is clear, concise, and descriptive. You want it to be specific so that you know exactly what changes you committed, but also short and sweet so you don't have to spend a bunch of time figuring out what you did. Also, if I'm not mistaken, I'm seeing a lot of example commit messages that speak in the present rather than the future...for example "Update version control definitions" is more appropriate that "Updated version control definitions".
+ A commit is the final step in the process to finalizing a change in a repository. When you commit a change it becomes a permanent (unless you decide to commit another change in the future that changes it) update in the repository. A good commit message is clear, concise, and descriptive. You want it to be specific so that you know exactly what changes you committed, but also short and sweet so you don't have to spend a bunch of time figuring out what you did. Also, if I'm not mistaken, I'm seeing a lot of example commit messages that speak in the present rather than the future...for example "Update version control definitions" is more appropriate that "Updated version control definitions".
 
 * What is a merge conflict?
 
