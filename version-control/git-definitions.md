@@ -17,3 +17,6 @@
 * What is a merge conflict?
 
  A merge conflict occurs when changes are made in two different branches on the same line of code or when a person deletes some code that someone else is trying to edit. Then when you try to merge it into your current branch git doesn't know which change is correct and will prompt you with a merge confilct message.
+
+
+###MAKING CHANGES TO LEARN MORE ABOUT GITHUB!
