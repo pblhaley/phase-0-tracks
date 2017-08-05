@@ -1,0 +1,22 @@
+#response {
+  margin-left: 625px;
+  margin-right: 625px;
+}
+
+#octopus {
+  display: block;
+  margin: auto;
+  z-index: -1;
+}
+
+#hat {
+  position: relative;
+  right: 18px;
+  top: 110px;
+}
+
+#glasses {
+  position: relative;
+  left: 42px;
+  top: 331px;
+}
