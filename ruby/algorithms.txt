@@ -1,0 +1,50 @@
+ELEVATOR ALGORITHM
+
+-Navigate to the elevator doors.
+-Located which level you are currently on by looking for the number sign on the elevator.
+-If you need to move to a higher numbered floor:
+  -Select the arrow up button on the wall beside the elevator door by raising your right arm, extending it towards the arrow up button, and pushing it against the button until the button lights up.
+  -Step back from the button and wait for the doors to open.
+-If you need to move to a lower numbered floor:
+  -Select the arrow down button on the wall beside the elevator door by raising your right arm, extending it towards the arrow down button, and pushing it against the button until the button lights up.
+  -Step back from the button and wait for the doors to open.
+-Once the doors open:
+  -If there are humans or robots exiting the elevator onto your current floor then move 4 feet backwards away from the elevator doors to allow them room to exit. After they have exited, move fowards into the elevator before the doors close.
+  -If there are no humans or robots exiting, move immediately forward into the elevator before the doors close.
+-Once you are in the elevator:
+  -Navigate to the floor buttons and select your intended floor by raising your right arm, extending it towards the button associated with the floor you need, and pushing the button until it lights up. Intended floors are as follows: Home=3, Lobby=1, Rooftop=5, Laundry=2, and Gym=2.
+-Stay on the elevator until the floor you need has been reached and the floor button becomes unlit.
+-Pause for 3 seconds for the elevator doors to open and then navigate out of the elevator.
+
+
+COMMON TASK ALGORITHM (BRUSHING TEETH IN THE MORNING)
+
+-When the alarm audio begins, reach left towards the alarm and select the off button.
+-Get out of bed by sitting up, turning 90 degrees to the left, putting both feet on the floor and standing up.
+-Until you are in the bathroom
+  -Put one foot in front of the other to move towards the bathroom
+-Once you reach the bathroom, extend your hand to meet the door knob and turn it clock-wise to open the bathroom door.
+-Until you are in front of the bathroom sink
+  -Put one foot in front of the other to move forward towards the sink
+-Once you reach the sink, extend you left hand and grab the blue toothbrush, and extend the right hand to turn the light switch from off to on.
+-After turning the light switch to the on position, use your right hand to turn the right water knob (cold) to slightly on.
+-Use your left hand to run the toothbrush bristles under the cold water.
+-Use your right hand to turn the right water knob to off.
+-Use your right hand to grab the toothpaste and lift the cap.
+-Use your right hand to gently squeeze a small amount of the toothpaste onto the toothbrush bristles.
+-Close the toothpaste cap and put down the toothpaste tube.
+-Switch the toothbrush from your left hand to your right hand.
+-Open your mouth and lift your toothbrush to your teeth.
+-Until 60 seconds have been reached
+  -Use your right hand to move the toothbrush in a circlular motion over all surface areas of all teeth.
+-When 60 seconds have been reached, use the toothbrush to brush your tongue for 5 seconds.
+-Remove the toothbrush from your mouth.
+-Use your left hand to turn the right water knob (cold) to slightly on.
+-Rinse the toothbrush under the water until all toothpaste has been washed off.
+-Use your right hand to return the toothbrush to the toothbrush holder.
+-Spit excess toothpaste into the sink.
+-Use your right hand to cup some water and splash it on the outside of your mouth and chin area to remove any external toothpaste.
+-Turn the right water knob until water is no longer running.
+-Turn around 180 degrees.
+-Use both hands to grab a towel.
+-Use the towel to dry your mouth and chin area.
