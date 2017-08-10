@@ -7,9 +7,6 @@ volume=gets.chomp
 puts "What is the hampster's fur color?"
 fur=gets.chomp
 
-puts "Is this hampster a good candidate for adoption? y/n"
-adoption=gets.chomp
-
 puts "What is the hampster's estimated age?"
 age=gets.chomp
 
@@ -19,4 +16,6 @@ else
   age=gets.chomp
 end
 
+puts "Is this hampster a good candidate for adoption? y/n"
+adoption=gets.chomp
 
