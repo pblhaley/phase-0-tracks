@@ -1,0 +1,23 @@
+section {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(https://static.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: helvetica;
+}
+
+a:hover {
+  color: purple;
+}
+
+li {
+  list-style-type: square;
+}
