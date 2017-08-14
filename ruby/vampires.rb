@@ -1,3 +1,9 @@
+puts "How many employees will you be processing?"
+amount_employees=gets.chomp.to_i
+index = 0
+
+while index < amount_employees
+
 puts "What is your name?"
 name=gets.chomp
 
@@ -45,4 +51,7 @@ when name="Drake Cula" || "Tu Fang"
   "Definitely a vampire."
 else
   "Results inconclusive."
+end
+
+index += 1
 end
