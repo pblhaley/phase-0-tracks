@@ -9,49 +9,73 @@ name=gets.chomp
 
 puts "What is your age?"
 age=gets.chomp.to_i
-  if age < 100
-    age_condition = true
-  else
-    age_condition = false
-  end
 
 puts "What year were you born?"
 birth_year=gets.chomp.to_i
-  if birth_year > 1915
-    birth_year_condition = true
-  else
-    birth_year_condition = false
-  end
 
-puts "Our company cafeteria serves garlic bread. Should we order some for you? y/n"
-garlic=gets.chomp
-  if garlic == "y"
-    garlic_condition = true
-  else
-    garlic_condition = false
-  end
-
-puts "Would you like to enroll in the company's health insurance? y/n"
-insurance=gets.chomp
-  if insurance == "y"
-    insurance_condition = true
-  else
-    insurance_condition = false
-  end
-
-vampire_status = false
-puts case
-when age_condition && garlic_condition && insurance_condition
-  "Probably not a vampire."
-when age_condition=false && (garlic_condition=false || insurance_condition=false)
-  "Probably a vampire."
-when age_condition=false && garlic_condition=false && insurance_condition=false
-  "Almost certainly a vampire."
-when name="Drake Cula" || "Tu Fang"
-  "Definitely a vampire."
+if age == 2017 - birth_year
+  valid_age= true
 else
-  "Results inconclusive."
+  valid_age= false
 end
+
+valid_garlic=false
+until valid_garlic
+  puts "Our company cafeteria serves garlic bread. Should we order some for you? y/n"
+  garlic=gets.chomp
+    if garlic== "y"
+      garlic=true
+      valid_garlic=true
+    elsif garlic== "n"
+      garlic==false
+      valid_garlic=true
+    else
+      puts "Please respond with 'y' or 'n'."
+    end
+end
+
+valid_insurance=false
+until valid_insurance
+  puts "Would you like to enroll in the company's health insurance? y/n"
+  insurance=gets.chomp
+    if insurance== "y"
+      insurance=true
+      valid_insurance=true
+    elsif insurance== "n"
+      insurance=false
+      valid_insurance=true
+    else
+      puts "Please respond with 'y' or 'n'."
+    end
+end
+
+allergies = ""
+while allergies != "done"
+  puts "Please list your allergies one at a time. Type 'done' when finished."
+  allergies=gets.chomp
+    if allergies == "sunshine"
+      break
+    end
+end
+
+
+if valid_age && (garlic || insurance)
+  result = "Probably not a vampire."
+elsif valid_age=false && (garlic=false || insurance=false)
+  result = "Probably a vampire."
+elsif valid_age=false && garlic=false && insurance=false
+  result = "Almost certainly a vampire."
+elsif name = "Drake Cula" || "Tu Fang"
+  result = "Definitely a vampire."
+elsif allergies == "sunshine"
+  result = "Probably a vampire."
+else
+  result = "Results inconclusive."
+end
+
+puts result
 
 index += 1
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
