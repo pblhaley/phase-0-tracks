@@ -7,13 +7,14 @@
 def encrypt(str)
   index = 0
     while index < str.length
-      if str[index] != "z"
-        str[index] = str[index].next
-        index += 1
-      else
+      if str[index] == "z"
         str[index] = "a"
-        index += 1
+      elsif str[index] == " "
+        str[index] = " "
+      else
+        str[index] = str[index].next
       end
+        index += 1
     end
   str
 end
@@ -30,7 +31,11 @@ def decrypt(str)
   alphabet = ("abcdefghijklmnopqrstuvwxyz")
     while index < str.length
       letter = alphabet.index(str[index])
-      str[index] = alphabet[letter -1]
+        if str[index] == " "
+          str[index] = " "
+        else
+          str[index] = alphabet[letter - 1]
+        end
       index += 1
     end
   str
