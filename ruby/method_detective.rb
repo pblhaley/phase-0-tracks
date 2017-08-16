@@ -8,6 +8,7 @@ puts "iNvEsTiGaTiOn".swapcase
 #=> “InVeStIgAtIoN”
 
 puts "zom".insert(1, "o")
+puts "zom".gsub(/[o]/, "oo")
 # => “zoom”
 
 puts "enhance".center(17)
@@ -32,6 +33,7 @@ puts "Elementary,    my   dear        Watson!".squeeze(" ")
 # => "Elementary, my dear Watson!"
 
 puts "z".replace("122")
+puts "z".ord
 # => 122
 # (What is the significance of the number 122 in relation to the character z? 122 is the ASCII code identifier for "z")
 
