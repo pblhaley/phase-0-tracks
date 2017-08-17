@@ -34,36 +34,39 @@ client = {
 
 p client
 
+valid_input=false
 
+until valid_input
 puts "Do you need to update any of the information? If so, please enter the keyword for the data that needs updating. If not, please say 'none'."
 update=gets.chomp
   if update == "name"
     puts "Client Name:"
     name_update=gets.chomp.to_s
-    :name[name_update]
+    client[:name] = name_update
   end
   if update == "age"
     puts "Client Age:"
     age_update=gets.chomp.to_i
-    :age[age_update]
+    client[:age] = age_update
   end
   if update == "children"
     puts "Number of Children:"
     children_update=gets.chomp.to_i
-    :children[children_update]
+    client[:children] = children_update
   end
   if update == "theme"
     puts "Decor Theme:"
     decor_update=gets.chomp.to_s
-    :theme[decor_update]
+    client[:theme] = decor_update
   end
   if update == "rooms"
     puts "Number of Rooms:"
     room_update=gets.chomp.to_i
-    :rooms[room_update]
+    client[:rooms] = room_update
   end
   if update == "none"
     puts "Thank you. Your entry has been stored."
+    valid_input=true
   end
-
-p client
+  p client
+end
