@@ -23,5 +23,15 @@ search_array(array, 9)
 # =>
 
 def fib(num)
-
+  arr = [0, 1]
+  index = 0
+    until index == num.to_i - 2
+      next_number = arr[-1] + arr[-2]
+      arr.push(next_number)
+      index +=1
+    end
+  arr
 end
+
+p fib(6)
+p fib(100)[-1] == 218922995834555169026
