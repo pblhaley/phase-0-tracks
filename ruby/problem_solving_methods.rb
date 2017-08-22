@@ -38,12 +38,13 @@ p fib(100)[-1] == 218922995834555169026
 
 
 ########## SORT AN ARRAY-BUBBLE SORT ##########
-# =>
+# =>Visualizations helped in this release. I found a great video on youtube that basically walked me through creating a bubble sort algorithm and explains all the pieces that were needed and why they were neccessary. I felt excited learning about this, but I need more practice on my own when I'm not watching a video that shows me exactly how to do it. I think the video is great for learning, but I need to practice more to solidify it.
 
+# Write a sorting method that sorts an array of integers.
 def bubble_sort(array)
   n = array.length
-
   loop do
+
     # Iterates the 4 through the array
     #[4, 3, 2, 1]
     #[3, 4, 2, 1]
@@ -56,18 +57,22 @@ def bubble_sort(array)
     #[1, 2, 3, 4]
     # End result is a sorted array
 
+    # Create a variable so that you can later stop this process.
     swapped = false
 
+    # Use iteration to loop through your array.
     (n-1).times do |i|
+
+      # Compare one integer to the next integer and swap if appropriate.
       if array[i] > array[i +1]
         array[i], array[i +1] = array[i +1], array[i]
         swapped = true
       end
     end
 
+    # End the loop if nothing needs to be swapped anymore.
     break if not swapped
   end
-
   array
 end
 
