@@ -23,14 +23,14 @@ search_array(array, 9)
 # =>
 
 def fib(num)
-  arr = [0, 1]
+  array = [0, 1]
   index = 0
     until index == num.to_i - 2
-      next_number = arr[-1] + arr[-2]
-      arr.push(next_number)
+      next_number = array[-1] + array[-2]
+      array.push(next_number)
       index +=1
     end
-  arr
+  array
 end
 
 p fib(6)
