@@ -12,6 +12,14 @@
 def alias_manager(original_name)
   reverse_words = original_name.to_s.downcase.split(' ').reverse!.join(' ')
   characters = reverse_words.chars
+  characters.length.times do |i|
+    vowels = ["a", "e", "i", "o", "u"]
+    consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+      if vowels.include?(characters[i])
+        characters[i] == vowels[vowels.index(characters[i]).next]
+      end
+      i += 1
+  end
 end
 
 p alias_manager("Peter Haley")
