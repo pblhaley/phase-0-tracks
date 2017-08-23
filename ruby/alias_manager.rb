@@ -20,6 +20,10 @@ def alias_manager(original_name)
       end
       i += 1
   end
+  alias_name = characters.join.split(' ')
+  alias_name.last.capitalize!
+  alias_name.first.capitalize!
+  alias_name.join(' ')
 end
 
 p alias_manager("Peter Haley")
