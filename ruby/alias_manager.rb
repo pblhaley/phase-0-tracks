@@ -9,10 +9,14 @@
 # Put this second new array back into string form and capitalize appropriately.
 # Print the string.
 
+names =[]
+alias_list = []
+
 loop do
-  puts "Please enter the first and last name of the person who needs an alias. Please enter 'quit' when you are ready to exit."
+  puts "Please enter the first and last name of the person who needs an alias. Please enter 'quit' when you are ready to exit the Alias Manager."
   original_name = gets.chomp
   break if original_name.downcase == "quit"
+  names << original_name
 
   reverse_name = original_name.to_s.downcase.split(' ').reverse!.join(' ')
   #p reverse_name
@@ -41,5 +45,12 @@ loop do
   cap_alias = alias_name.map{|i| i.capitalize}.join(' ')
   puts cap_alias
 
-end
+  alias_list << cap_alias
 
+  end
+
+  new_names = alias_list.length
+  new_names.times do |i|
+    puts "#{names[i]} has received an alias. Please refer to them as #{alias_list[i]} from this point forward."
+
+end
