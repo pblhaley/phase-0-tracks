@@ -6,6 +6,9 @@ zombie_apocalypse_supplies = ["hatchet", "rations", "water jug", "binoculars",
 # 1. Iterate through the zombie_apocalypse_supplies array using #each,
 # printing each item in the array separated by an asterisk
 # ----
+zombie_apocalypse_supplies.each do |i|
+  p "zombie_apocalypse_supplies[i] * "
+end
 
 # 2. Create a method to see if a particular item (string) is in the
 # zombie_apocalypse_supplies using #each.
