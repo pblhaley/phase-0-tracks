@@ -86,3 +86,20 @@ print_list(list)
 
 
 ########## REFLECT ##########
+# What did you learn about pseudocode from working on this challenge?
+# This is maybe the first time that pseudocoding really played a huge role in my coding. Before now it seemed kinda redundant, but during this challenge being able to break up my methods and how I was going to tackle them through my psuedocode allowed me to work on one method at a time.
+
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# I think the hash works better for this challenge because we had a couple pieces of info (item and quantity) that needed to be organized together. Hashes and arrays are both super helpful in organizing data.
+
+# What does a method return?
+# A method returns an object that is determined by the last line of the method.
+
+# What kind of things can you pass into methods as arguments?
+# You can pass strings, integers, variables, and other methods.
+
+# How can you pass information between methods?
+# You can use a method to call another method.
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+# The concept of psuedocoding really solidified for me in this challenge. Also, I got more comfortable with using hashes because for most of my previous work I have been using arrays. I still need to do some practicing with hashes and with iteration, but I feel like I'm getting there!
