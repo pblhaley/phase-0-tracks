@@ -14,8 +14,8 @@ def create_grocery_list(items)
   split_items.each {|item| list[item] = 1}
   list
 end
-p items = "apples oranges bananas"
-p list = create_grocery_list(items)
+#p items = "apples oranges bananas"
+#p list = create_grocery_list(items)
 
 
 # Method to add an item to a list
@@ -28,7 +28,7 @@ def add_item(list, item, quantity)
   list[item] = quantity
   list
 end
-p add_item(list, "ice cream", 3)
+#p add_item(list, "ice cream", 3)
 
 
 # Method to remove an item from the list
@@ -41,7 +41,7 @@ def delete_item(list, item)
   list.delete(item)
   list
 end
-p delete_item(list, "apples")
+#p delete_item(list, "apples")
 
 
 # Method to update the quantity of an item
@@ -54,7 +54,7 @@ def update_quantity(list, item, updated_quantity)
   list[item] = updated_quantity
   list
 end
-p update_quantity(list, "oranges", 5)
+#p update_quantity(list, "oranges", 5)
 
 
 # Method to print a list and make it look pretty
@@ -71,4 +71,18 @@ def print_list(list)
     puts "#{item}: #{quantity}"
   end
 end
+#print_list(list)
+
+
+items = "avocados wine rice bread"
+list = create_grocery_list(items)
+add_item(list, "lemonade", 2)
+add_item(list, "tomato", 3)
+add_item(list, "onion", 1)
+add_item(list, "ice cream", 4)
+delete_item(list, "lemonade")
+update_quantity(list, "ice cream", 1)
 print_list(list)
+
+
+########## REFLECT ##########
