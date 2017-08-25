@@ -30,8 +30,8 @@
 # output: list of all items and quantities
 
 def create_grocery_list(items)
-  list = {}
   split_items = items.split(' ')
+  list = {}
   split_items.each {|item| list[item] = 1}
   list
 end
