@@ -11,6 +11,11 @@ class Puppy
     end
   end
 
+  def roll_over
+    puts "*rolls over*"
+  end
+
+
 end
 
 ########## DRIVER CODE ##########
@@ -18,3 +23,4 @@ end
 sailor = Puppy.new
 sailor.fetch("ball")
 sailor.speak(3)
+sailor.roll_over
