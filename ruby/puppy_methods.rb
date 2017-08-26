@@ -15,6 +15,9 @@ class Puppy
     puts "*rolls over*"
   end
 
+  def dog_years(integer)
+    puts integer * 7
+  end
 
 end
 
@@ -24,3 +27,4 @@ sailor = Puppy.new
 sailor.fetch("ball")
 sailor.speak(3)
 sailor.roll_over
+sailor.dog_years(5)
