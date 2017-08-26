@@ -19,6 +19,10 @@ class Puppy
     puts integer * 7
   end
 
+  def sit
+    puts "*sits*"
+  end
+
 end
 
 ########## DRIVER CODE ##########
@@ -28,3 +32,4 @@ sailor.fetch("ball")
 sailor.speak(3)
 sailor.roll_over
 sailor.dog_years(5)
+sailor.sit
