@@ -59,4 +59,5 @@ santas.each do |i|
 end
 
 
+### Whenever I run this code the output puts 100 of my initialize methods before printing the correct output. I can't figure out how to get it to stop doing that. Any thoughts?
 
