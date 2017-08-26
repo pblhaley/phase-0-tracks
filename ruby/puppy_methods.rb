@@ -1,3 +1,5 @@
+########## PUPPY CLASS ##########
+
 class Puppy
 
   def initialize
@@ -29,7 +31,7 @@ class Puppy
 
 end
 
-########## DRIVER CODE ##########
+########## DRIVER CODE FOR PUPPY CLASS ##########
 
 sailor = Puppy.new
 sailor.fetch("ball")
@@ -37,3 +39,43 @@ sailor.speak(3)
 sailor.roll_over
 sailor.dog_years(5)
 sailor.sit
+
+
+########## SUPERHERO CLASS ##########
+
+class Superhero
+
+  def initialize
+    puts "Initializing new superhero instance..."
+  end
+
+  def fly
+    puts "*flies*"
+  end
+
+  def villan(name)
+    puts "#{name} is my archnemesis!"
+  end
+
+end
+
+hero_array = []
+
+50.times do
+  superhero = Superhero.new
+  hero_array << superhero
+end
+
+hero_array.each do |i|
+  puts i.fly
+  puts i.villan("The Joker")
+end
+
+
+
+
+########## DRIVER CODE FOR SUPERHERO CLASS ##########
+
+#batman = Superhero.new
+#batman.fly
+#batman.villan("The Joker")
