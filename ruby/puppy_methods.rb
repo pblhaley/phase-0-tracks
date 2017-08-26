@@ -7,3 +7,6 @@ class Puppy
 
 end
 
+########## DRIVER CODE ##########
+sailor = Puppy.new
+sailor.fetch("ball")
