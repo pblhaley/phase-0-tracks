@@ -28,7 +28,7 @@ class Game
 # => change the index of the output array where the letter matches to that letter
 # => put both arrays back into strings
 
-    elsif @correct_word_array.include?(guessed_letter)
+    elsif @correct_word.include?(guessed_letter)
       puts "Would ya look at that!"
       @correct_word_array.each do |i|
         if @correct_word_array[i] == guessed_letter
@@ -54,3 +54,10 @@ end
 
 
 ########## DRIVER CODE ##########
+
+puts "PLAYER1, please enter a word for PLAYER2 to guess:"
+word = gets.chomp
+
+game = Game.new(word)
+puts "PLAYER2, you have #{game.available_guesses} guesses left. Please try to guess the word by entering one letter at a time."
+puts "Here's what you've got so far: #{game.output_guess_array.join}"
