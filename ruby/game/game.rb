@@ -59,5 +59,14 @@ puts "PLAYER1, please enter a word for PLAYER2 to guess:"
 word = gets.chomp
 
 game = Game.new(word)
-puts "PLAYER2, you have #{game.available_guesses} guesses left. Please try to guess the word by entering one letter at a time."
+puts "PLAYER2, you have #{game.available_guesses} guesses to get it right. Please try to guess the word by entering one letter at a time."
 puts "Here's what you've got so far: #{game.output_guess_array.join}"
+
+until game.output_guess == game.correct_word || (game.guesses == game.available_guesses
+  puts "What's your next guess?"
+  player_guess = gets.chomp
+  game.guess(player_guess)
+  puts "Here's what you've got so far: #{game.output_guess_array.join}"
+end
+
+game.end_of_game
