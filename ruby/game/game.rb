@@ -9,30 +9,44 @@
 
 
 class Game
-  attr_accessor :correct_word :available_guesses :guesses :user_guess
+  attr_accessor :correct_word, :available_guesses, :guesses, :output_guess
 
   def initialize(correct_word)
-    @correct_word = correct_word.chars
+    @correct_word = correct_word
     @available_guesses = correct_word.length
     @guesses = 0
-    @user_guess = correct_word.tr("abcdefghijklmnopqrstuvwxyz", "_")
+    @output_guess = correct_word.tr("abcdefghijklmnopqrstuvwxyz", "_")
+    @correct_word_array = @correct_word.chars
+    @output_guess_array = @output_guess.chars
   end
 
   def guess(guessed_letter)
-    if user_guess.include?(guessed_letter) && correct_word.include?(guessed_letter)
+    if output_guess.include?(guessed_letter) && correct_word.include?(guessed_letter) == false
       index = correct_word.index(guessed_letter)
-      user_guess[index] = guessed_letter
+      output_guess[index] = guessed_letter
       @guesses += 1
-      p @user_guess
-    elsif correct_word.include?(guessed_letter)
-      index = correct_word.index(guessed_letter)
-      user_guess[index] = guessed_letter
-      p @user_guess
+      @output_guess
+
+#If the correct word includes the guessed letter
+# => split the correct word into an array
+# => find the index of the the array where the letter matches
+# => split the output that the player sees into an array
+# => change the index of the output array where the letter matches to that letter
+# => put both arrays back into strings
+
+    elsif @correct_word_array.include?(guessed_letter)
+      puts "Would ya look at that!"
+      @correct_word_array.each do |i|
+        if @correct_word_array[i] == guessed_letter
+          @output_guess_array[i] = @correct_word_array[i]
+          @output_guess_array.join
+        end
+      end
     else
       @guesses += 1
-      puts "No good. You've got #{@available_guesses-@guesses} left."
+      puts "No good, you're terrible at this! You've only got #{@available_guesses-@guesses} left..."
     end
   end
 end
 
-game = Game.new("peter")
+#game = Game.new("peter")
