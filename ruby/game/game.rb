@@ -6,10 +6,8 @@
 # => define a way to keep track of the correct guesses
 
 
-
-
 class Game
-  attr_accessor :correct_word, :available_guesses, :guesses, :output_guess
+  attr_accessor :correct_word, :available_guesses, :guesses, :output_guess, :correct_word_array, :output_guess_array
 
   def initialize(correct_word)
     @correct_word = correct_word
@@ -39,7 +37,7 @@ class Game
       @correct_word_array.each do |i|
         if @correct_word_array[i] == guessed_letter
           @output_guess_array[i] = @correct_word_array[i]
-          @output_guess_array.join
+          @output_guess_array
         end
       end
     else
@@ -47,6 +45,16 @@ class Game
       puts "No good, you're terrible at this! You've only got #{@available_guesses-@guesses} left..."
     end
   end
+
+  def end_of_game
+    if @correct_word == @output_guess
+      puts "You guessed it! Great job!"
+    else
+      puts "Wow, I think even my dog is a better guesser than you. Try harder next time!"
+    end
+  end
 end
 
-#game = Game.new("peter")
+
+
+########## DRIVER CODE ##########
