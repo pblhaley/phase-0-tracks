@@ -9,7 +9,7 @@
 
 
 class Game
-  attr_accessor :correct_word :available_guesses :guesses :past_guesses
+  attr_accessor :correct_word :available_guesses :guesses :user_guess
 
   def initialize(correct_word)
     @correct_word = correct_word.chars
@@ -20,8 +20,19 @@ class Game
 
   def guess(guessed_letter)
     if user_guess.include?(guessed_letter) && correct_word.include?(guessed_letter)
-
+      index = correct_word.index(guessed_letter)
+      user_guess[index] = guessed_letter
+      @guesses += 1
+      p @user_guess
+    elsif correct_word.include?(guessed_letter)
+      index = correct_word.index(guessed_letter)
+      user_guess[index] = guessed_letter
+      p @user_guess
+    else
+      @guesses += 1
+      puts "No good. You've got #{@available_guesses-@guesses} left."
+    end
+  end
 end
 
 game = Game.new("peter")
-p game.char_spots
