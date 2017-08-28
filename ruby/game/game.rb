@@ -1,9 +1,5 @@
-########## GAME PSUEDOCODE ##########
-# Initialize method:
-# => define the word to be guessed
-# => define an amount of guesses
-# => define the amount of guesses available
-# => define a way to keep track of the correct guesses
+########## I DID NOT GET THIS TO SUCCESSFULLY RUN, GONNA TUNE INTO OFFICE HOURS THIS WEEK FOR IT ##########
+
 
 
 class Game
