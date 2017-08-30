@@ -93,3 +93,18 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# 1. What are the differences between the two different hash syntaxes shown in the state_data file?
+#    The hash rocket allows for a key to be a string and it also stores it's information superficially, whereas the hash colon stores information permanently in one place and take symbols for keys.
+
+# 2. What does require_relative do? How is it different from require?
+#    Require_relative uploads information from a separate file into the working file. It is different from require because it only works for files within the same directory as the working file. If you need to upload files in a different directory you would use regular require and provide the file path.
+
+# 3. What are some ways to iterate through a hash?
+#
+
+# 4. When refactoring virus_effects, what stood out to you about the variables, if anything?
+#    Having those variables as arguments was unneccessary because the variables were being called within the methods already.
+
+# 5. What concept did you most solidify in this challenge?
+#    This challenge helped me solidify calling hashes, and especially hashes within hashes. I didn't at first get the iteration release spot on, but now I feel like I have a much better understanding of keys and values especially with hashy hashes!
