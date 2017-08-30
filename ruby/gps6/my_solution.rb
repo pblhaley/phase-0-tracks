@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [with: Britt Flowers].
+# We spent [2] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # require_relative allows you to upload data from another file into our current file. It is a built-in method that retrieves whatever file is input. The difference between require_relative and require is that require_relative is used if the uploaded data is in the same directory as the working file and require is used if it's not.
