@@ -101,7 +101,7 @@ end
 #    Require_relative uploads information from a separate file into the working file. It is different from require because it only works for files within the same directory as the working file. If you need to upload files in a different directory you would use regular require and provide the file path.
 
 # 3. What are some ways to iterate through a hash?
-#
+#    Well, here we used a .each type of iteration, but I think you can also use .map or simply the "do" command.
 
 # 4. When refactoring virus_effects, what stood out to you about the variables, if anything?
 #    Having those variables as arguments was unneccessary because the variables were being called within the methods already.
