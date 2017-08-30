@@ -15,56 +15,54 @@ class VirusPredictor
     @state = state_of_origin
     @population = population
     @population_density = population_density
+    @number_of_deaths
+    @speed
   end
 
 # virus_effects is responsible for calling two methods within this method.
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
+    print "#{@state} will lose #{@number_of_deaths} people in this outbreak and will spread across the state in #{@speed} months.\n\n"
   end
 
 # private is responsible for making all the methods below it private from outside interference.
   private
 
 # predicted_deaths is taking in three parameters and using conditionals to output and print the number of deaths for a certain state.
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
+      @number_of_deaths = (@population * 0.4).floor
     elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
+      @number_of_deaths = (@population * 0.3).floor
     elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
+      @number_of_deaths = (@population * 0.2).floor
     elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
+      @number_of_deaths = (@population * 0.1).floor
     else
-      number_of_deaths = (@population * 0.05).floor
+      @number_of_deaths = (@population * 0.05).floor
     end
-
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
-
   end
 
 # speed_of_spread is responsible for taking in two parameters, using conditionals, and outputting and printing the rate of virus spread in months for a particular state.
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread
+    #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
+    @speed = 0.0
 
     if @population_density >= 200
-      speed += 0.5
+      @speed += 0.5
     elsif @population_density >= 150
-      speed += 1
+      @speed += 1
     elsif @population_density >= 100
-      speed += 1.5
+      @speed += 1.5
     elsif @population_density >= 50
-      speed += 2
+      @speed += 2
     else
-      speed += 2.5
+      @speed += 2.5
     end
-
-    puts " and will spread across the state in #{speed} months.\n\n"
-
   end
 
 end
