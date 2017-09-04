@@ -50,3 +50,33 @@ matchingData({animal: "dog", legs: 4}, {animal: "pig", legs: 4})
 matchingData({animal: "dog", legs: 3}, {animal: "pig", legs: 4})
 
 
+//--------------- RELEASE 2 ---------------
+// Write a function that takes an integer for length, and builds an returns an array of strings of the given length.
+// Input: An integer
+// Steps: Create a first function that outputs a random word
+//          -Create an alphabet variable
+//          -
+//
+// Output: An array of random words equal to the integer we inputted
+
+function randomWord() {
+  var word = "";
+  var randomLength = Math.floor(Math.random()*10)
+  for (var i = 0; i <= randomLength; i++) {
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var character = Math.floor(Math.random()*26);
+    word += alphabet[character];
+  }
+  return word
+}
+
+
+function randomArray(integer) {
+  var randomwordsArray = []
+  for (var i = 0; i < integer; i++) {
+    randomwordsArray.push(randomWord())
+  }
+  return randomwordsArray
+}
+
+console.log(randomArray(3))
