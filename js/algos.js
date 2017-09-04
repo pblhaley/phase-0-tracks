@@ -31,20 +31,17 @@ console.log(longestWord(["long word", "longer word", "longest word"]))
 // Steps:
 // Output: True or false depending on whether or not our two given objects contain a matching key-value pair
 
-function matchingData ({object1Key: object1Value, object1Key2: object1Value2}, {object2Key: object2Value, object2Key2: object2Value2}) {
-  var dotheyMatch = false;
-  if (object1Value == object2Value) {
-    dotheyMatch = true;
-    console.log(dotheyMatch);
+function matchingData (object1, object2) {
+  for (var key1 in object1) {
+    for (var key2 in object2) {
+      if (key1 == key2) {
+        if (object1[key1] == object2[key2]) {
+          return true;
+        }
+      }
+    }
   }
-  if (object1Value2 == object2Value2) {
-    dotheyMatch = true;
-    console.log(dotheyMatch);
-  }
-  else {
-    dotheyMatch = false;
-    console.log(dotheyMatch);
-  }
+  return false;
 }
 
 matchingData({animal: "dog", legs: 4}, {animal: "pig", legs: 4})
