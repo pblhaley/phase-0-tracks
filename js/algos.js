@@ -21,8 +21,8 @@ function longestWord(array) {
   return correctWord;
 }
 
-console.log(longestWord(["lamp", "backpack", "camping stove", "hammock", "cooler"]))
-console.log(longestWord(["long word", "longer word", "longest word"]))
+console.log(longestWord(["lamp", "backpack", "camping stove", "hammock", "cooler"]));
+console.log(longestWord(["long word", "longer word", "longest word"]));
 
 
 //--------------- RELEASE 1 ---------------
@@ -98,9 +98,10 @@ console.log(randomArray(5));
 //        Print the longestWord result
 // Output: the longest word in our random array (10 times over)
 
+// This loop seems to run endlessly even though I have it set to 10...I think it has something to do with my longestWord function above because when I comment out that part of the driver code everything else runs fine...but my driver code for my longestWord function works the correct way...
+
 for (var i = 0; i < 10; i++) {
   var randomWords = randomArray(5);
   console.log(randomWords);
-  var longWord = longestWord(randomWords);
-  console.log(longWord);
+  console.log(longestWord(randomWords));
 };
