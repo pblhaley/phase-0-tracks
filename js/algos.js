@@ -54,17 +54,23 @@ matchingData({animal: "dog", legs: 3}, {animal: "pig", legs: 4})
 // Write a function that takes an integer for length, and builds an returns an array of strings of the given length.
 // Input: An integer
 // Steps: Create a first function that outputs a random word
-//          -Create an alphabet variable
-//          -
-//
+//          -Create a word variable and an alphabet variable
+//          -Use #random to create a variable that makes your random words have a varity of lengths up to 10 characters
+//          -Then loop through the alphabet that length variable to create random words
+//          -Return that word
+//        Create a second function that accepts an integer
+//          -Create an empty array to catch your new words
+//          -Loop for however many times the integer argument defined
+//          -Push those new words into your array
+//          -Return the array
 // Output: An array of random words equal to the integer we inputted
 
 function randomWord() {
   var word = "";
-  var randomLength = Math.floor(Math.random()*10)
+  var randomLength = Math.floor(Math.random() * 10)
   for (var i = 0; i <= randomLength; i++) {
     var alphabet = "abcdefghijklmnopqrstuvwxyz";
-    var character = Math.floor(Math.random()*26);
+    var character = Math.floor(Math.random() * 26);
     word += alphabet[character];
   }
   return word
@@ -80,3 +86,21 @@ function randomArray(integer) {
 }
 
 console.log(randomArray(3))
+console.log(randomArray(5))
+
+
+//--------------- DRIVER CODE ---------------
+// Write driver code that generates an array, prints the array, feeds the array into longestWord function, and prints the result. Do all of this 10 times.
+// Input: Loop 10 times
+// Steps: Create a random array using our randomArray function
+//        Print this random array
+//        Feed this random array into the longestWord function
+//        Print the longestWord result
+// Output: the longest word in our random array (10 times over)
+
+for (var i = 0; i < 10; i++) {
+  var randomWords = randomArray(5);
+  console.log(randomWords);
+  var longWord = longestWord(randomWords);
+  console.log(longWord);
+}
