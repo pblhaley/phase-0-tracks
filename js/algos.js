@@ -44,10 +44,10 @@ function matchingData (object1, object2) {
     };
   };
   console.log(false);
-}
+};
 
-matchingData({animal: "dog", legs: 4}, {animal: "pig", legs: 4})
-matchingData({animal: "dog", legs: 3}, {animal: "pig", legs: 4})
+matchingData({animal: "dog", legs: 4}, {animal: "pig", legs: 4});
+matchingData({animal: "dog", legs: 3}, {animal: "pig", legs: 4});
 
 
 //--------------- RELEASE 2 ---------------
@@ -74,7 +74,7 @@ function randomWord() {
     word += alphabet[character];
   }
   return word
-}
+};
 
 
 function randomArray(integer) {
@@ -83,10 +83,10 @@ function randomArray(integer) {
     randomwordsArray.push(randomWord())
   }
   return randomwordsArray
-}
+};
 
-console.log(randomArray(3))
-console.log(randomArray(5))
+console.log(randomArray(3));
+console.log(randomArray(5));
 
 
 //--------------- DRIVER CODE ---------------
@@ -103,4 +103,4 @@ for (var i = 0; i < 10; i++) {
   console.log(randomWords);
   var longWord = longestWord(randomWords);
   console.log(longWord);
-}
+};
