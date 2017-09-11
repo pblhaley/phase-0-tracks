@@ -1,0 +1,15 @@
+1. JOINING THREE DATABASES
+  sqlite> SELECT * FROM businesses, users, reviews WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id;
+  2|Amir's Towing|5|Holly|Berry|1|5|Best place ever!|2|5
+  4|Lotus Yoga|2|Mandy|Kaling|2|1|This place was terrible...|4|2
+  1|Grundy Hollow Wedding Chapel|6|Merryl|Streepman|3|3|This place was alright.|1|6
+
+2. CHOOSE TO JUST VIEW THE USER'S NAMES, THE BUSINESS NAME, THE STAR RATING, AND THE COMMENT.
+  sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id;
+  Holly|Berry|Amir's Towing|5|Best place ever!
+  Mandy|Kaling|Lotus Yoga|1|This place was terrible...
+  Merryl|Streepman|Grundy Hollow Wedding Chapel|3|This place was alright.
+
+3. VIEWING THE DATA OF ALL THREE TABLES FOR JUST ONE PARTICULAR BUSINESS.
+  sqlite> SELECT * FROM reviews JOIN users ON reviews.user_id = users.id JOIN businesses ON reviews.business_id = businesses.id WHERE businesses.name="Lotus Yoga";
+  2|1|This place was terrible...|4|2|2|Mandy|Kaling|4|Lotus Yoga
